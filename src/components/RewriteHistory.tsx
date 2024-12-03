@@ -15,7 +15,7 @@ export default function RewriteHistory({
 }: RewriteHistoryProps) {
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">The Muses' Archives</h2>
+      <h2 className="text-2xl font-bold mb-4">The Muses&apos; Archives</h2>
       {history.length > 0 ? (
         <>
           <ul className="space-y-4">
