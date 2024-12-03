@@ -24,9 +24,9 @@ export async function POST(req: Request) {
       ],
     });
 
-    const rewritten = completion.choices[0].message.content;
+    const explanation = completion.choices[0].message.content;
 
-    return NextResponse.json({ rewritten });
+    return NextResponse.json({ explanation });
   } catch (error) {
     console.error("OpenAI API error:", error);
     return NextResponse.json(
