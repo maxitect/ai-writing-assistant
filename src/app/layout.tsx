@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ask the Muses AI",
-  description: "Ask the Muses of Ancient Greece to improve your writing with AI-powered suggestions",
+  description:
+    "Ask the Muses of Ancient Greece to improve your writing with AI-powered suggestions",
 };
 
 export default function RootLayout({

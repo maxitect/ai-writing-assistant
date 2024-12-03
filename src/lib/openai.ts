@@ -1,3 +1,5 @@
+"use server";
+
 import OpenAI from "openai";
 
 if (!process.env.OPENAI_API_KEY) {

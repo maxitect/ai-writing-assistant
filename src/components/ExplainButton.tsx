@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -31,7 +33,7 @@ Rewritten: "${rewritten}"`,
       }
 
       const data = await response.json();
-      setExplanation(data.rewritten);
+      setExplanation(data.explanation);
     } catch (error) {
       console.error("Error:", error);
       alert("An error occurred while getting the explanation.");

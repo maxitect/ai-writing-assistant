@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import HistoryItem from "./HistoryItem";
 import { RewriteEntry } from "../lib/types";
