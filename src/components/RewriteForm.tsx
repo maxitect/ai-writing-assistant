@@ -36,11 +36,12 @@ export default function RewriteForm({ addToHistory }: RewriteFormProps) {
         body: JSON.stringify({ input, tone, length }),
       });
 
+      const data = await response.json();
+      
       if (!response.ok) {
-        throw new Error("Failed to rewrite text");
+        throw new Error(data.error || "Failed to rewrite text");
       }
 
-      const data = await response.json();
       setRewritten(data.rewritten);
       addToHistory({
         original: input,
@@ -49,8 +50,8 @@ export default function RewriteForm({ addToHistory }: RewriteFormProps) {
         length,
       });
     } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred while rewriting the text.");
+      console.error("Error details:", error);
+      alert(error instanceof Error ? error.message : "An error occurred while rewriting the text.");
     } finally {
       setIsLoading(false);
     }
