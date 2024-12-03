@@ -5,7 +5,7 @@ import { getOpenAIInstance } from "@/lib/openai";
 
 export async function POST(req: Request) {
   try {
-    const openai = getOpenAIInstance();
+    const openai = await getOpenAIInstance();
     const { input, tone, length } = await req.json();
 
     const completion = await openai.chat.completions.create({
