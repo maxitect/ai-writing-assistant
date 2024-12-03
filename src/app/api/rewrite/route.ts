@@ -1,10 +1,11 @@
 "use server";
 
 import { NextResponse } from "next/server";
-import openai from "@/lib/openai";
+import { getOpenAIInstance } from "@/lib/openai";
 
 export async function POST(req: Request) {
   try {
+    const openai = getOpenAIInstance();
     const { input, tone, length } = await req.json();
 
     const completion = await openai.chat.completions.create({
