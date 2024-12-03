@@ -108,7 +108,7 @@ ai-writing-assistant/
    npm install
    ```
 
-   If it error, try:
+   If it errors, try:
 
    ```bash
    npm install --legacy-peer-deps
@@ -142,11 +142,11 @@ ai-writing-assistant/
 
 3. **Rewrite and Explain**:
 
-   - Click "Rewrite" to generate a rewritten version.
-   - Use the "Explain" button to understand the improvements.
+   - Click "Ask the Muses" to generate a rewritten version.
+   - Use the "Ask the Muses to explain" button to understand the improvements.
 
 4. **View and Manage History**:
-   - Rewrites are automatically saved in history.
+   - Rewrites are automatically saved in history, aka `The Muses' Archives`.
    - Delete items or export history as a `.txt` file.
 
 ---
